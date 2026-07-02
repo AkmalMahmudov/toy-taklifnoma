@@ -6,9 +6,25 @@
   --gold-light: #d8b876;
   --gold-deep: #8a651f;
   --line: rgba(182, 137, 63, 0.35);
+  --muted: #7a7466;
+  --on-gold: #fdfbf6;
   --serif: 'Cormorant Garamond', 'Georgia', serif;
   --script: 'Italianno', cursive;
   --sans: 'Montserrat', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #1c1812;
+    --cream-dark: #262019;
+    --ink: #ece4d3;
+    --gold: #d8b876;
+    --gold-light: #e8cf9c;
+    --gold-deep: #d9a94e;
+    --line: rgba(216, 184, 118, 0.25);
+    --muted: #a89a86;
+    --on-gold: #241d12;
+  }
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -232,6 +248,7 @@ section, footer.footer {
   width: 36px;
   height: 28px;
   color: var(--gold);
+  fill: currentColor;
   margin-bottom: 22px;
 }
 .invite-text p {
@@ -288,7 +305,7 @@ section, footer.footer {
 }
 .muted {
   font-size: 15px;
-  color: #7a7466;
+  color: var(--muted);
 }
 
 /* ---------- MAP ---------- */
@@ -299,6 +316,7 @@ section, footer.footer {
   max-width: 720px;
   height: 340px;
   margin: 0 auto;
+  background: var(--cream-dark);
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
@@ -318,7 +336,7 @@ section, footer.footer {
   font-size: 13px;
   letter-spacing: 1px;
   text-decoration: none;
-  color: var(--cream);
+  color: var(--on-gold);
   background: var(--gold-deep);
   padding: 13px 24px;
   border-radius: 30px;
